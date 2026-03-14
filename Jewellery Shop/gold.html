@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Gold Jewellery - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="bracelets.html">Bracelets</a>
+<a href="bangles.html">Bangles</a>
+<a href="anklets.html">Anklets</a>
+<a href="bridal.html">Bridal</a>
+<a href="diamond.html">Diamond</a>
+<a href="gold.html">Gold</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Gold Jewellery Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="https://img.freepik.com/premium-photo/beautiful-necklace-gold-jewellery-red-background_885572-88.jpg?w=996" height="250">
+<h3>Gold Necklace</h3>
+<p>₹70,000</p>
+<button onclick="addToCart('Gold Necklace',70000)">Add to Cart</button>
+<button onclick="addToWishlist('Gold Necklace',70000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://img.freepik.com/premium-photo/jewels-sparkle-golden-wedding-ring_1059430-29864.jpg" height="250">
+<h3>Gold Ring</h3>
+<p>₹35,000</p>
+<button onclick="addToCart('Gold Ring',35000)">Add to Cart</button>
+<button onclick="addToWishlist('Gold Ring',35000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://www.seekpng.com/png/detail/364-3646757_gold-jewellery-png-image-background-gold-bangles-design.png" height="250">
+<h3>Gold Bangles</h3>
+<p>₹55,000</p>
+<button onclick="addToCart('Gold Bangles',55000)">Add to Cart</button>
+<button onclick="addToWishlist('Gold Bangless',55000)">Add to Wishlist</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Bridal Jewellery - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="bracelets.html">Bracelets</a>
+<a href="bangles.html">Bangles</a>
+<a href="anklets.html">Anklets</a>
+<a href="bridal.html">Bridal</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Bridal Jewellery Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="" height="250">
+<img src="https://i.pinimg.com/originals/27/ef/3b/27ef3b7289df91d2844c5db6c04210aa.jpg" height="250">
+<h3>Bridal Gold Set</h3>
+<p>₹13,00,000</p>
+<button onclick="addToCart('Bridal Gold Set',1300000)">Add to Cart</button>
+<button onclick="addToWishlist('Bridal Gold set',1300000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghyDjU7YFCayL11a0dWrSoKQ-fz_iQXhvP7mw4QomTEHHrz5v7EkmCgOMnHWrgQzG7D682-6Uo2cn2ZfSKfv75YoaeR8u5W2OYC0yPRavZ_Yo1P_0nuEt0EdxDfWATC13hrrbw7fwgyW25yVqB4IrCPVyagxWB8ajUPBgWENihLnEoAvllB9g_OfYeuCdr/s920/6_bridal%20gold%20bangles%20.jpg" height="250">
+<h3>Bridal Gold Bangles</h3>
+<p>₹5,00,000</p>
+<button onclick="addToCart('Bridal Gold Bangles',500000)">Add to Cart</button>
+<button onclick="addToWishlist('Bridal Gold Bangles',500000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://www.southjewellery.com/wp-content/uploads/2022/09/bridal-diamond-jewellery-scaled.jpg" height="250">
+<h3>Bridal Diamond Set</h3>
+<p>₹18,50,000</p>
+<button onclick="addToCart('Bridal Diamond Set',1850000)">Add to Cart</button>
+<button onclick="addToWishlist('Bridal Diamond set',1850000)">Add to Wishlist</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+</html>

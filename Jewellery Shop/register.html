@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register -Royal Jewellers</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Create Account</h2>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter Name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter Email">
+
+<label>Password</label>
+<input type="password" placeholder="Create Password">
+
+<button onclick="registerUser()">Register</button>
+
+</form>
+
+<p>Already have an account? <a href="login.html">Login</a></p>
+<script src="script.js"></script>
+<script>
+    // REGISTER PAGE SCRIPT
+function registerUser() {
+    const name = document.getElementById('regName').value;
+    const email = document.getElementById('regEmail').value;
+    const password = document.getElementById('regPassword').value;
+
+    if (!name || !email || !password) {
+        alert('Please fill all fields');
+        return;
+    }
+
+    // Get existing users or create empty array
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if email already exists
+    if (users.some(user => user.email === email)) {
+        alert('Email already registered');
+        return;
+    }
+
+    // Add new user
+    users.push({ name, email, password });
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert('Registration successful! You can now login.');
+    window.location.href = 'login.html'; // redirect to login page
+}
+</script>
+</body>
+</html>

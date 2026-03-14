@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Diamond Jewellery - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="bracelets.html">Bracelets</a>
+<a href="bangles.html">Bangles</a>
+<a href="anklets.html">Anklets</a>
+<a href="bridal.html">Bridal</a>
+<a href="diamond.html">Diamond</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Diamond Jewellery Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="https://manubhai.in/SocialMedia/post_artworks/11112019102945Artboard1copy3.jpg" height="250">
+<h3>Diamond Earrings</h3>
+<p>₹80,000</p>
+<button  onclick="addToCart('Diamond Earrings',80000)">Add to Cart</button>
+<button onclick="addToWishlist('Diamond Earrings ',80000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://i.pinimg.com/736x/4d/ae/5e/4dae5e68b5d77ecfc96db0b86a2fb77b.jpg" height="250">
+<h3>Diamond Bracelet</h3>
+<p>₹60,000</p>
+<button  onclick="addToCart('Diamond Bracelet',60000)">Add to Cart</button>
+\<button onclick="addToWishlist('Diamond Bracelet ',60000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://www.thejewelleryeditor.com/media/images_thumbnails/filer_public_thumbnails/filer_public/6a/c0/6ac0955e-a066-4999-9a55-beb3e5bad056/mouawad_incomparable_diamond_necklace.jpg__1080x0_q75_crop-scale_subsampling-2_upscale-false.jpg" height="250">
+<h3>Diamond Necklace</h3>
+<p>₹1,20,000</p>
+<button  onclick="addToCart('Diamond Necklace',120000)">Add to Cart</button>
+<button onclick="addToWishlist('Diamond Necklace',120000)">Add to Wishlist</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+</html>

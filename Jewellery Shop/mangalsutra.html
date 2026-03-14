@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mangalsutra - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="bracelets.html">Bracelets</a>
+<a href="bangles.html">Bangles</a>
+<a href="anklets.html">Anklets</a>
+<a href="bridal.html">Bridal</a>
+<a href="diamond.html">Diamond</a>
+<a href="gold.html">Gold</a>
+<a href="silver.html">Silver</a>
+<a href="mangalsutra.html">Mangalsutra</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Mangalsutra Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="https://5.imimg.com/data5/SELLER/Default/2024/1/373516275/RW/WC/HB/106996161/2-500x500.jpg" height="250">
+<h3>Traditional Mangalsutra</h3>
+<p>₹75000</p>
+<button onclick="addToCart('Traditionl Mangalsutra',75000)">Add to Cart</button>
+<button onclick="addToWishlist('Traditional Mangalsutra',75000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://www.onlinepng.com/cdn/shop/files/BRT521726-1.jpg?v=1719398247" height="250">
+<h3>Bracelet Mangalsutra</h3>
+<p>₹55,000</p>
+<button onclick="addToCart(' Bracelet Mangalsutra',55000)">Add to Cart</button>
+<button onclick="addToWishlist('Bracelet Mangalsutra',55000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://southindiajewels.com/wp/wp-content/uploads/2022/08/Ab-Designs-Jewellery-2.jpg" height="250">
+<h3>Short Mangalsutra</h3>
+<p>₹45,000</p>
+<button onclick="addToCart('Short Mangalsutra',45000)">Add to Cart</button>
+<button onclick="addToWishlist('Short Mangalsutra',45000)">Add to Wishlist</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+
+</html>

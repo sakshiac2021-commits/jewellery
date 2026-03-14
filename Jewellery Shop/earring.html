@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Earrings - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Earrings Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/21550784/2023/1/14/596e23e6-49b9-4805-98a4-9404f1928be41673684736712PANASHGold-TonedContemporaryJhumkasEarrings1.jpg" height="250">
+<h3>Gold Earrings</h3>
+<p>₹10,000</p>
+<button onclick="addToCart('Gold Earrings',10000)">Add to Cart</button>
+<button onclick="addToWishlist('Gold Earrings',10000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://www.tanishq.co.in/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw29f03fab/header-mega-menu/banner-images/earrings-50k-1l-hr.jpg" height="250">
+<h3>Diamond Earrings</h3>
+<p>₹28,000</p>
+<button onclick="addToCart('Diamond Earrings',28000)">Add to Cart</button>
+<button onclick="addToWishlist('Diamond Earrings',28000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://img.joomcdn.net/19aeaca3c6310024d4a8805da4d92c76dad1cf42_original.jpeg" height="250">
+<h3>Pearl Earrings</h3>
+<p>₹15,000</p>
+<button onclick="addToCart('Pearl Earrings',15000)">Add to Cart</button>
+<button onclick="addToWishlist('Pearl Earrings',15000)">Add to Wishlist</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+
+</html>

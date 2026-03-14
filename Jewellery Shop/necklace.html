@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Necklace - Royal Jewellery</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Necklace Collection</h2>
+
+
+<div class="product-container">
+
+
+<div class="product">
+<img src="https://i.pinimg.com/736x/9c/0c/d1/9c0cd10e7e78f704d0768a093479d143.jpg" height="250">
+<h3>Gold Necklace</h3>
+<p>₹45,000</p>
+<button onclick="addToCart('Gold Necklace',45000)">Add to Cart</button>
+<button onclick="addToWishlist('Gold Necklace',45000)">Add to Wishlist</button>
+</div>
+
+
+<div class="product">
+<img src="https://wallpaperaccess.com/full/2305789.jpg" height="250">
+<h3>Diamond Necklace</h3>
+<p>₹75,000</p>
+<button onclick="addToCart('Diamond Necklace',75000)">Add to Cart</button>
+<button onclick="addToWishlist('Diamond Necklace',75000)">Add to Wishlist</button>
+</div>
+
+
+<div class="product">
+<img src="https://i.etsystatic.com/23346425/r/il/63bbf4/2430008225/il_570xN.2430008225_7hr0.jpg" height="250">
+<h3>Pearl Necklace</h3>
+<p>₹30,000</p>
+<button onclick="addToCart('Pearl Necklace',30000)">Add to Cart</button>
+<button onclick="addToWishlist('Pearl Necklace',30000)">Add to Wishlist</button>
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Royal Jewellery</p>
+
+</footer>
+
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+
+</html>

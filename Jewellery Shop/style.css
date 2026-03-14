@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1601121141461-9d6647bca1ed') no-repeat center center/cover;
+}
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.search-bar {
+  display: block; /* ensures it is visible */
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+}

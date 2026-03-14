@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Diamond Jewellery - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="bracelets.html">Bracelets</a>
+<a href="bangles.html">Bangles</a>
+<a href="anklets.html">Anklets</a>
+<a href="bridal.html">Bridal</a>
+<a href="diamond.html">Diamond</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Diamond Jewellery Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=500&q=60" height="250">
+<h3>Diamond Ring</h3>
+<p>₹80,000</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a2c5c?auto=format&fit=crop&w=500&q=60" height="250">
+<h3>Diamond Bracelet</h3>
+<p>₹60,000</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1608042314453-ae338d80c427?auto=format&fit=crop&w=500&q=60" height="250">
+<h3>Diamond Necklace</h3>
+<p>₹1,20,000</p>
+<button>Add to Cart</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+</html>

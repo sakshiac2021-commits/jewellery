@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Bangles - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="bracelets.html">Bracelets</a>
+<a href="bangles.html">Bangles</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Bangles Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="https://png.pngtree.com/thumb_back/fh260/background/20230610/pngtree-one-pair-of-gold-bangles-on-a-black-background-image_2974526.jpg" height="250">
+<h3>Gold Bangles</h3>
+<p>₹40,000</p>
+<button onclick="addToCart('Gold Bangles',40000)" >Add to Cart</button>
+<button onclick="addToWishlist('Gold Bangles',40000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://www.manekratna.com/webimage/product/resized/AD-BANGLE-BG-2570W-275-MA.jpg" height="250">
+<h3>Diamond Bangles</h3>
+<p>₹70,000</p>
+<button onclick="addToCart('Diamond Bangles',70000)">Add to Cart</button>
+<button onclick="addToWishlist('Diamond Bangles',70000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://img.freepik.com/premium-photo/indian-wedding-bangles-background_1059430-43710.jpg?w=740" height="250">
+<h3>Traditional Bangles</h3>
+<p>₹25,000</p>
+<button onclick="addToCart('Traditional Bangles',25000)">Add to Cart</button>
+<button onclick="addToWishlist('Traditional Bangles',25000)">Add to Wishlist</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+
+</html>

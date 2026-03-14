@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Anklets - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="bracelets.html">Bracelets</a>
+<a href="bangles.html">Bangles</a>
+<a href="anklets.html">Anklets</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+<a href="search.html">Search</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Anklets Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="https://i.etsystatic.com/23996878/r/il/998060/5714691253/il_340x270.5714691253_k7qw.jpg" height="250">
+<h3>Silver Anklet</h3>
+<p>₹3,000</p>
+<button onclick="addToCart('Silver Anklet',3000)">Add to Cart</button>
+<button onclick="addToWishlist('Silver Anklet',3000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://image.wedmegood.com/resized-nw/1300X/wp-content/uploads/2020/07/Aarna-Antique-Anklets.jpeg" height="250">
+<h3>Traditional Anklet</h3>
+<p>₹5,000</p>
+<button onclick="addToCart('Traditional Anklet',5000)">Add to Cart</button>
+<button onclick="addToWishlist('Traditonal Anklet',5000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://img.joomcdn.net/5bb804045c6d221b44cafd285c90a579f8acdd77_original.jpeg" height="250">
+<h3>Designer Anklet</h3>
+<p>₹7,000</p>
+<button onclick="addToCart('Designer Anklet ',7000)">Add to Cart</button>
+<button onclick="addToWishlist('Designer Anklet',7000)">Add to Wishlist</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+
+</html>

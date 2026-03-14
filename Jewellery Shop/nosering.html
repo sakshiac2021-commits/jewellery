@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Nose Ring - Royal Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Royal Jewellery</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="rings.html">Rings</a>
+<a href="necklace.html">Necklace</a>
+<a href="earrings.html">Earrings</a>
+<a href="bracelets.html">Bracelets</a>
+<a href="bangles.html">Bangles</a>
+<a href="anklets.html">Anklets</a>
+<a href="bridal.html">Bridal</a>
+<a href="diamond.html">Diamond</a>
+<a href="gold.html">Gold</a>
+<a href="silver.html">Silver</a>
+<a href="nosering.html">Nose Ring</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="wishlist.html">Wishlist</a>
+</nav>
+
+</header>
+
+
+<h2 style="text-align:center;">Nose Ring Collection</h2>
+
+
+<div class="product-container">
+
+<div class="product">
+<img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/b/6/b6e37a8nykpriy000752.jpg" height="250">
+<h3>Gold Nose Ring</h3>
+<p>₹5,000</p>
+<button  onclick="addToCart('gold nosering',5000)">Add to Cart</button>
+<button onclick="addToWishlist('gold nosering',5000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://i.pinimg.com/originals/da/73/e3/da73e3a3b9731b8ec0b876150cfab2a5.jpg" height="250">
+<h3>Diamond Nose Pin</h3>
+<p>₹12,000</p>
+<button  onclick="addToCart('diamond nosepin',12000)">Add to Cart</button>
+<button onclick="addToWishlist('diamond nosepin',12000)">Add to Wishlist</button>
+</div>
+
+<div class="product">
+<img src="https://5.imimg.com/data5/SG/YG/DG/SELLER-15369156/german-silver-nose-ring-1000x1000.jpg" height="250">
+<h3>Silver Nose Ring</h3>
+<p>₹2,500</p>
+<button  onclick="addToCart('silver nosering',2500)">Add to Cart</button>
+<button onclick="addToWishlist('silver Nosering',2500)">Add to Wishlist</button>
+</div>
+
+</div>
+
+
+<footer>
+<p>© 2026 Royal Jewellery</p>
+</footer>
+
+</body>
+<script src="script.js"></script>
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+    productName: name,
+    productPrice: price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert(name + " added to cart");
+
+}
+
+</script>
+</html>

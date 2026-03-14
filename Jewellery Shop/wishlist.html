@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wishlist - Royal Jewellery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Royal Jewellery</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html">Cart 🛒</a>
+    <a href="wishlist.html">Wishlist 💖</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<h2 style="text-align:center; margin-top:20px;">Your Wishlist</h2>
+
+<div class="product-container">
+  <!-- Wishlist items will be added dynamically using JS -->
+</div>
+
+<footer>
+  <p>© 2026 Royal Jewellery</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // Render wishlist items on the wishlist page
+function renderWishlist() {
+    const container = document.querySelector('.product-container'); // Make sure this div exists
+    if (!container) return; // Stop if the page has no container
+
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    container.innerHTML = ''; // Clear previous items
+
+    wishlist.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.classList.add('product');
+        div.innerHTML = `
+            <img src="${item.img}" height="250">
+            <h3>${item.name}</h3>
+            <p>₹${item.price}</p>
+            <button onclick="addToCartFromWishlist(${index})">Add to Cart</button>
+            <button onclick="removeFromWishlist(${index})">Remove</button>
+        `;
+        container.appendChild(div);
+    });
+}
+
+// Call this function when wishlist page loads
+window.onload = renderWishlist;
+</script>
+</body>
+</html>
